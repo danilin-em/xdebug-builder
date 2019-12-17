@@ -13,6 +13,6 @@ set -ex
 
 rm -rf /dist/*
 
-cp /xdebug/modules/ /dist/
+cp /xdebug/modules/xdebug.so /dist/xdebug.so
 
 chown -R "$1" /dist
