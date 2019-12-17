@@ -9,6 +9,8 @@ help:
 build:
 	docker build --build-arg VERSION=$(VERSION) -t localhost/xdebug-builder:latest -t localhost/xdebug-builder:$(VERSION) .
 env:
-	docker run --rm -it localhost/xdebug-builder:latest bash
+	docker run --rm -it -v `pwd`/dist:/dist localhost/xdebug-builder:latest bash
 copy:
-	docker run --rm -it localhost/xdebug-builder:latest -v `pwd`/dist:/dist /copy `id -u`:`id -g`
+	docker run --rm -v `pwd`/dist:/dist localhost/xdebug-builder:latest /copy `id -u`:`id -g`
+copy-root:
+	docker run --rm -v `pwd`/dist:/dist localhost/xdebug-builder:latest /copy
