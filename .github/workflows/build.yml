@@ -14,7 +14,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@master
       - name: Build
-        run: make build copy
+        run: make build copy-root
       - name: Release
         id: create_release
         uses: actions/create-release@v1

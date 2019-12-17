@@ -12,3 +12,5 @@ env:
 	docker run --rm -it -v `pwd`/dist:/dist localhost/xdebug-builder:latest bash
 copy:
 	docker run --rm -it -v `pwd`/dist:/dist localhost/xdebug-builder:latest /copy `id -u`:`id -g`
+copy-root:
+	docker run --rm -it -v `pwd`/dist:/dist localhost/xdebug-builder:latest /copy

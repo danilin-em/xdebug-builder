@@ -10,6 +10,6 @@ rm -rf /dist/*
 
 cp /xdebug/modules/xdebug.so /dist/xdebug.so
 
-if [[ ! $1 ]]; then
+if [[ $1 ]]; then
     chown -R "$1" /dist
 fi
