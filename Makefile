@@ -6,6 +6,7 @@ help:
 	echo "	make build	Build image"
 	echo "	make env	Run env"
 	echo "	make copy	Copy module"
+	echo "	make copy-root	Copy module (as root)"
 	echo "	make push	Push image to https://hub.docker.com"
 build:
 	docker build --build-arg VERSION=$(VERSION) -t localhost/xdebug-builder:latest -t localhost/xdebug-builder:$(VERSION) .
