@@ -2,7 +2,7 @@
 
 [Docker Hub](https://hub.docker.com/r/danilinem/xdebug-builder)
 
-Use builded [xdebug.so](https://github.com/danilin-em/xdebug-builder/releases/download/v2.9.0/xdebug.so)
+Use builded [releases](https://github.com/danilin-em/xdebug-builder/releases)
 
 See more on [XDebug Docs](https://xdebug.org/docs/)
 
