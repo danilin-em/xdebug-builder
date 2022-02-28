@@ -1,6 +1,8 @@
 #!make
 include .env
 
+DOCKER_REPO=docker.io/danilinem/xdebug-builder:$(VERSION)
+
 help:
 	echo "Usage:"
 	echo "	make build	Build image"
@@ -17,5 +19,5 @@ copy:
 copy-root:
 	docker run --rm -v `pwd`/dist:/dist localhost/xdebug-builder:latest /copy
 push:
-	docker tag localhost/xdebug-builder:$(VERSION) docker.io/$(username)/xdebug-builder:$(VERSION)
-	docker push docker.io/$(username)/xdebug-builder:$(VERSION)
+	docker tag localhost/xdebug-builder:$(VERSION) $(DOCKER_REPO)
+	docker push $(DOCKER_REPO)
